@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MT FORUM - Fundamental Intelligence</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://s3.tradingview.com/tv.js"></script>
+</head>
+<body>
+  <!-- AGE GATE -->
+  <div id="age-gate" class="age-gate">
+    <div class="age-content">
+      <h1>Intelejen Internasional Terpercaya</h1>
+      <p>Apakah Anda sudah berusia 21+ tahun?</p>
+      <label><input type="checkbox" id="agree" /> Saya setuju & berusia 21+</label>
+      <button id="enter-btn">Lanjutkan</button>
+    </div>
+  </div>
+
+  <!-- LANGUAGE SWITCHER -->
+  <div class="lang-switcher">
+    <span data-lang="id">🇮🇩</span>
+    <span data-lang="en">🇬🇧</span>
+    <span data-lang="ru">🇷🇺</span>
+    <span data-lang="ar">🇸🇦</span>
+    <span data-lang="zh">🇨🇳</span>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <img src="assets/logo.png" class="logo" alt="MT FORUM"/>
+      <h1 data-key="hero-title">Metode FUNDAMENTAL Adalah Kunci</h1>
+      <p data-key="hero-sub">Dari Intelejen Internasional Terpercaya</p>
+      <div class="hero-buttons">
+        <button onclick="joinNow()" data-key="cta-join">Gabung Kelas Eksekutif</button>
+        <button onclick="scrollToSection('membership')" data-key="cta-membership">Lihat Membership</button>
+      </div>
+    </div>
+    <!-- TRADINGVIEW CHART -->
+    <div id="tradingview" class="tradingview-widget"></div>
+  </header>
+
+  <!-- WHY FUNDAMENTAL -->
+  <section class="why-fundamental">
+    <h2 data-key="why-title">Mengapa FUNDAMENTAL Lebih Penting dari Teknikal?</h2>
+    <p data-key="why-text">Indikator hanya membaca pola masa lalu. FUNDAMENTAL menjelaskan alasan sebenarnya pergerakan harga: inflasi, suku bunga, geopolitik, supply-demand global.</p>
+  </section>
+
+  <!-- MARKET INSIGHT -->
+  <section class="insight">
+    <h2 data-key="insight-title">Market Insight</h2>
+    <div class="cards">
+      <div class="card">📊 FOMC Meeting</div>
+      <div class="card">💹 US CPI Release</div>
+      <div class="card">🛢️ OPEC Meeting</div>
+    </div>
+  </section>
+
+  <!-- PROGRAM -->
+  <section class="program">
+    <h2 data-key="program-title">Struktur Program</h2>
+    <div class="levels">
+      <div class="level">👶 Beginner</div>
+      <div class="level">🚀 Intermediate</div>
+      <div class="level">🏆 Advanced</div>
+    </div>
+  </section>
+
+  <!-- MEMBERSHIP -->
+  <section id="membership" class="membership">
+    <h2 data-key="membership-title">Membership Eksekutif</h2>
+    <div class="pricing">
+      <div class="price-box">
+        <h3>IDR</h3>
+        <p>Rp 2.500.000 / bulan</p>
+      </div>
+      <div class="price-box">
+        <h3>USD</h3>
+        <p>$160 / month</p>
+      </div>
+    </div>
+    <button onclick="joinNow()" data-key="cta-join2">Gabung Sekarang</button>
+  </section>
+
+  <!-- TICKER -->
+  <section class="ticker">
+    <div id="time"></div>
+    <marquee behavior="scroll" direction="left" id="ticker-bar">
+      🔥 XAUUSD 1875.50 | BTCUSD 27350 | OIL 92.30 | SILVER 23.50 | EURUSD 1.0830
+    </marquee>
+  </section>
+
+  <!-- WHY US -->
+  <section class="why-us">
+    <h2 data-key="whyus-title">Mengapa Pilih Kami</h2>
+    <div class="stats">
+      <div class="stat">👥 500+ Anggota Aktif</div>
+      <div class="stat">📈 95% Kepuasan Member</div>
+      <div class="stat">🕒 24/7 Support</div>
+    </div>
+  </section>
+
+  <!-- CHAT BUBBLE AI -->
+  <div id="chat-bubble" class="chat-bubble">💬</div>
+  <div id="chat-box" class="chat-box">
+    <div id="chat-messages"></div>
+    <input type="text" id="chat-input" placeholder="Tanya seputar fundamental..."/>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>⚠️ METODE INI BISA MEMBUAT KALIAN CERDAS DAN KAYA RAYA ABADI</p>
+    <p>Contact: <a href="mailto:support@mtforum.global">support@mtforum.global</a> | WhatsApp: +62 81901212120</p>
+    <button id="sound-toggle">🔊/🔇</button>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    new TradingView.widget({
+      "autosize": true,
+      "symbol": "OANDA:XAUUSD",
+      "interval": "30",
+      "timezone": "Etc/UTC",
+      "theme": "dark",
+      "style": "1",
+      "locale": "en",
+      "container_id": "tradingview"
+    });
+  </script>
+</body>
+</html>
